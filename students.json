@@ -1,0 +1,15 @@
+[
+    {
+        "student_id": "Ridge Junior",
+        "name": "Ridge Junior Qab",
+        "age": 23,
+        "class_name": "Data Science",
+        "subjects": {
+            "Geog": 56.0,
+            "Kis": 56.0,
+            "Maths": 45.0,
+            "His": 56.0,
+            "B/s": 99.0
+        }
+    }
+]
