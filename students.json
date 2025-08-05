@@ -11,5 +11,18 @@
             "His": 56.0,
             "B/s": 99.0
         }
+    },
+    {
+        "student_id": "5435",
+        "name": "Kelvin Klein Rift",
+        "age": 24,
+        "class_name": "Full Stack",
+        "subjects": {
+            "Dutch": 45.0,
+            "His": 34.0,
+            "Geog": 99.0,
+            "Spanish": 100.0,
+            "Maths": 100.0
+        }
     }
 ]
