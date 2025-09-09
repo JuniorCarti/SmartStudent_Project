@@ -1,0 +1,29 @@
+[
+    {
+        "student_id": "5689",
+        "name": "Gavin Betterest",
+        "age": 56,
+        "class_name": "Computer Science",
+        "subjects": {
+            "Dutch": 78.0,
+            "His": 89.0,
+            "Kis": 78.0,
+            "Maths": 89.0,
+            "Eng": 78.0,
+            "Islamic": 32.0,
+            "CRE": 56.0
+        }
+    },
+    {
+        "student_id": "4545",
+        "name": "Calvin Klein",
+        "age": 56,
+        "class_name": "Data Science",
+        "subjects": {
+            "Kis": 56.0,
+            "Eng": 32.0,
+            "Maths": 56.0,
+            "His": 99.0
+        }
+    }
+]
