@@ -1,0 +1,52 @@
+y
+🎯 Welcome to the Guess the Number Game!
+I'm thinking of a number between 1 and 50.
+You have 5 attempts to guess it. Good luck!
+
+Attempt 1/5: Enter your guess (1-50): 35
+🔥 Way too high! Try a much lower number.
+
+Attempt 2/5: Enter your guess (1-50): 12 
+📈 Too low! Try a slightly higher number.
+
+Attempt 3/5: Enter your guess (1-50): 45 
+🔥 Way too high! Try a much lower number.
+
+Attempt 4/5: Enter your guess (1-50): 13 
+📈 Too low! Try a slightly higher number.
+
+Attempt 5/5: Enter your guess (1-50): 26 
+🔥 Way too high! Try a much lower number.
+
+💔 Game over! You've used all 5 attempts.
+The secret number was: 15
+
+Would you like to play again? (yes/no): yes
+
+========================================
+🎯 Welcome to the Guess the Number Game!
+I'm thinking of a number between 1 and 50.
+You have 5 attempts to guess it. Good luck!
+
+Attempt 1/5: Enter your guess (1-50): 23
+📈 Too low! Try a slightly higher number.
+
+Attempt 2/5: Enter your guess (1-50): 43
+🔥 Way too high! Try a much lower number.
+
+Attempt 3/5: Enter your guess (1-50): 21
+📈 Too low! Try a slightly higher number.
+
+Attempt 4/5: Enter your guess (1-50): 33
+📉 Too high! Try a slightly lower number.
+
+Attempt 5/5: Enter your guess (1-50): 20
+📈 Too low! Try a slightly higher number.
+
+💔 Game over! You've used all 5 attempts.
+The secret number was: 30
+
+Would you like to play again? (yes/no): no
+Thanks for playing! 👋
+
+==================================================

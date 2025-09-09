@@ -1,0 +1,70 @@
+# **MCQ Quiz - Expert Answers & Deep Dive**
+
+### **1. Which Python type holds textual data?**
+**Answer: (c) str** ✅
+
+**Deep Dive:**
+- `str` is Python's immutable sequence type for Unicode text
+- Stored as sequences of Unicode code points (not ASCII)
+- Support extensive methods: `.upper()`, `.split()`, `.find()`, `.format()`
+- Triple-quoted strings (`"""`) support multi-line content
+- F-strings (formatted string literals) allow embedded expressions: `f"Value: {x}"`
+
+**Real-world context:** All user input from `input()` returns as `str`, requiring conversion for numerical processing.
+
+---
+
+### **2. What does this expression return? `len("Hi") + len("Bye") * 2`**
+**Answer: 8** ✅
+
+**Operator Precedence Breakdown:**
+1. `len("Bye") * 2` → `3 * 2` → `6` (multiplication first)
+2. `len("Hi") + 6` → `2 + 6` → `8`
+
+**Memory Aid: PEMDAS** (Parentheses, Exponents, Multiplication/Division, Addition/Subtraction)
+
+
+### **3. Which of these is correct branching syntax?**
+**Answer: (b) if x == 1:** ✅
+
+**Syntax Mastery:**
+- **Colon required:** Ends the condition statement
+- **Double equals:** `==` for comparison vs `=` for assignment
+- **Indentation matters:** Python uses whitespace to define code blocks
+- **No parentheses needed:** Unlike many languages, `if (x == 1):` is valid but non-idiomatic
+
+
+### **4. How do you convert user input into an integer safely?**
+**Recommended Answer: Use try-except with informative error handling**
+
+**Production-grade solution:**
+```python
+def get_valid_integer(prompt="Enter an integer: "):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a whole number (e.g., 42).")
+
+# Usage:
+user_number = get_valid_integer()
+```
+
+**Why this is superior:**
+- **Robust:** Handles all non-integer inputs gracefully
+- **User-friendly:** Provides clear guidance on expected format
+- **Non-breaking:** Loop continues until valid input received
+- **Reusable:** Encapsulated in function for repeated use
+
+**Advanced alternative for specific number ranges:**
+```python
+def get_integer_in_range(prompt, min_val, max_val):
+    while True:
+        try:
+            value = int(input(prompt))
+            if min_val <= value <= max_val:
+                return value
+            print(f"Please enter a value between {min_val} and {max_val}")
+        except ValueError:
+            print("Invalid number format.")
+```
