@@ -1,0 +1,34 @@
+{
+  "rooms": {
+    "start_room": {
+      "name": "The Entrance",
+      "description": "You stand at the entrance of an ancient dungeon. Torches flicker on the walls, casting long shadows.",
+      "exits": {
+        "north": "hallway"
+      }
+    },
+    "hallway": {
+      "name": "Long Hallway",
+      "description": "A long, dark hallway stretches before you. The air is damp and cold.",
+      "exits": {
+        "south": "start_room",
+        "east": "puzzle_room"
+      }
+    },
+    "puzzle_room": {
+      "name": "Chamber of Riddles",
+      "description": "The walls are covered in ancient runes. A mysterious voice echoes in the room.",
+      "exits": {
+        "west": "hallway",
+        "north": "treasure_room"
+      }
+    },
+    "treasure_room": {
+      "name": "Treasure Room",
+      "description": "A glittering room filled with gold and jewels! But something doesn't feel right...",
+      "exits": {
+        "south": "puzzle_room"
+      }
+    }
+  }
+}
