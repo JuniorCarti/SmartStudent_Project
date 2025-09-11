@@ -5,6 +5,7 @@ Python Implementation of Various Algorithms with Complexity Analysis
 
 import time
 import matplotlib.pyplot as plt
+import numpy as np
 
 # 1. Mystery Function Analysis
 def mystery(L):
@@ -70,6 +71,7 @@ def time_function(func, n, *args):
 def compare_fibonacci_runtimes():
     """
     Compare runtime of recursive vs iterative Fibonacci implementations.
+    Generates and saves a PNG plot of the results.
     """
     n_values = list(range(10, 41, 5))
     recur_times = []
@@ -115,10 +117,56 @@ def compare_fibonacci_runtimes():
     plt.grid(True, alpha=0.3)
     
     plt.tight_layout()
+    
+    # Save the plot as a PNG file
     plt.savefig('fibonacci_runtime_comparison.png', dpi=300, bbox_inches='tight')
+    print("\nPlot saved as 'fibonacci_runtime_comparison.png'")
+    
     plt.show()
     
     return n_values, recur_times, iter_times, results
+
+# 5. Generate theoretical complexity curves for comparison
+def generate_complexity_curves():
+    """
+    Generate theoretical complexity curves for educational purposes.
+    """
+    n_values = np.linspace(1, 40, 100)
+    
+    # Theoretical complexities (normalized for comparison)
+    constant = np.ones_like(n_values)
+    logarithmic = np.log2(n_values)
+    linear = n_values
+    linearithmic = n_values * np.log2(n_values)
+    quadratic = n_values ** 2
+    exponential = 2 ** (n_values / 5)  # Scaled for visualization
+    
+    # Normalize all curves to similar range for comparison
+    constant = constant / np.max(constant)
+    logarithmic = logarithmic / np.max(logarithmic)
+    linear = linear / np.max(linear)
+    linearithmic = linearithmic / np.max(linearithmic)
+    quadratic = quadratic / np.max(quadratic)
+    exponential = exponential / np.max(exponential)
+    
+    plt.figure(figsize=(10, 6))
+    plt.plot(n_values, constant, label='Constant Θ(1)', linewidth=2)
+    plt.plot(n_values, logarithmic, label='Logarithmic Θ(log n)', linewidth=2)
+    plt.plot(n_values, linear, label='Linear Θ(n)', linewidth=2)
+    plt.plot(n_values, linearithmic, label='Linearithmic Θ(n log n)', linewidth=2)
+    plt.plot(n_values, quadratic, label='Quadratic Θ(n²)', linewidth=2)
+    plt.plot(n_values, exponential, label='Exponential Θ(2ⁿ) (scaled)', linewidth=2)
+    
+    plt.xlabel('Input Size (n)')
+    plt.ylabel('Normalized Runtime')
+    plt.title('Theoretical Complexity Curves')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    
+    plt.savefig('theoretical_complexity_curves.png', dpi=300, bbox_inches='tight')
+    print("Theoretical complexity curves saved as 'theoretical_complexity_curves.png'")
+    
+    plt.show()
 
 # Test the functions
 if __name__ == "__main__":
@@ -132,5 +180,10 @@ if __name__ == "__main__":
     result_idx = binary_search(sorted_arr, target)
     print(f"Binary search for {target} in {sorted_arr}: index {result_idx}")
     
-    # Compare Fibonacci runtimes
+    # Compare Fibonacci runtimes (this will generate and save the PNG)
     n_vals, recur_t, iter_t, fib_results = compare_fibonacci_runtimes()
+    
+    # Generate theoretical complexity curves
+    generate_complexity_curves()
+    
+    print("\nAll plots have been generated and saved as PNG files.")
