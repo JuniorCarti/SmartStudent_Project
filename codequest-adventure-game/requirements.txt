@@ -1,0 +1,2 @@
+# CodeQuest requirements
+pygame>=2.0.0
